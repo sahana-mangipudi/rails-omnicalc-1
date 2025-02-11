@@ -4,16 +4,18 @@ class CalculatorsController < ApplicationController
 
   def square_results
     @the_num = params[:user_number].to_f
-    @the_result = (@the_num ** 2).round(2)
+    @the_result = (@the_num ** 2).round(4) 
   end
+  
 
   def square_root_new
   end
 
   def square_root_results
     @number = params[:number].to_f
-    @result = Math.sqrt(@number).round(2)
+    @result = Math.sqrt(@number).round(3) 
   end
+  
 
   def random_new
   end

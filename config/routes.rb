@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get "/square/new", to: "calculators#square_new"
   get "/square/results", to: "calculators#square_results"
 
-  get "/square_root/new", to: "calculators#square_root_new"
-  post "/square_root/results", to: "calculators#square_root_results"
+  get "/square_root/new", to: "calculators#square_root"
+  post "/square_root/results", to: "calculators#square_root_result"  
 
   get "/random/new", to: "calculators#random_new"
   post "/random", to: "calculators#random_result"
