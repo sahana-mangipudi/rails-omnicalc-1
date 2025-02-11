@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
-  # Square routes
-  get "/square/new", to: "square#new"
-  get "/square/results", to: "square#results"
+  root "calculators#square_new"
 
-  # Square root routes
-  get "/square_root/new", to: "square_root#new"
-  post "/square_root", to: "square_root#calculate"
+  get "/square/new", to: "calculators#square_new"
+  get "/square/results", to: "calculators#square_results"
 
-  # Random routes
-  get "/random/new", to: "random#new"
-  post "/random", to: "random#generate"
+  get "/square_root/new", to: "calculators#square_root_new"
+  post "/square_root/results", to: "calculators#square_root_results"
 
-  # Payment routes
-  get "/payment/new", to: "payment#new"
-  post "/payment/result", to: "payment#calculate"
+  get "/random/new", to: "calculators#random_new"
+  post "/random", to: "calculators#random_result"
+
+  get "/payment/new", to: "calculators#payment_new"
+  post "/payment/result", to: "calculators#payment_result"
 end
